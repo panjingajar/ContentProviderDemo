@@ -14,8 +14,6 @@ import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 
-import java.util.Arrays;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -33,8 +31,6 @@ public class MainActivity extends AppCompatActivity {
         Uri uri = ContactsContract.CommonDataKinds.Phone.CONTENT_URI;
         Cursor cursor = contentResolver.query(uri,null,null,null,null);
         Log.i("CPDEMO", "Total Contact: "+cursor.getCount());
-
-
         cursor.close();
     }
 }
